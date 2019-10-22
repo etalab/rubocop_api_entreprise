@@ -74,6 +74,9 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/MethodCalledOnDoEndBlock:
+  Enabled: false
+
 Style/MethodCallWithArgsParentheses:
   Enabled: true
   Exclude:
