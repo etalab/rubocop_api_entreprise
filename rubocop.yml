@@ -1,4 +1,7 @@
 ---
+inherit_from:
+  - https://raw.githubusercontent.com/trailblazer/meta/master/rubocop.yml
+
 AllCops:
   Exclude:
     - 'Gemfile'
@@ -17,6 +20,9 @@ Layout/IndentFirstArrayElement:
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
 
 Lint/UnreachableCode:
   Exclude:
@@ -48,11 +54,11 @@ Naming/VariableNumber:
 
 Style/AsciiComments:
   Enabled: false
-  
+
 Style/BlockComments:
   Exclude:
     - 'spec/spec_helper.rb'
-    
+
 Style/BracesAroundHashParameters:
   EnforcedStyle: context_dependent
 
@@ -64,10 +70,10 @@ Style/ClassAndModuleChildren:
 
 Style/Documentation:
   Enabled: false
-  
+
 Style/FrozenStringLiteralComment:
   Enabled: false
-  
+
 Style/MethodCallWithArgsParentheses:
   Enabled: true
   Exclude:
@@ -76,7 +82,13 @@ Style/MethodCallWithArgsParentheses:
     - require
     - to
     - to_not
-    
+
 Style/SignalException:
   Exclude:
     - 'app/concepts/**/*'
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: single_quotes
